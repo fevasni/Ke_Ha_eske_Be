@@ -10,11 +10,15 @@ from collections import deque
 import cv2 as cv
 import numpy as np
 import mediapipe as mp
+
 import streamlit as st
+import urllib3
 
 from utils import CvFpsCalc
 from model import KeyPointClassifier
 from model import PointHistoryClassifier
+
+http = urllib3.PoolManager(num_pools=50)
 
 
 def get_args():
