@@ -12,6 +12,7 @@ import numpy as np
 import mediapipe as mp
 
 import streamlit as st
+from streamlit_webrtic import webtric_streamer,videoTransformerBase
 import urllib3
 
 from utils import CvFpsCalc
@@ -185,6 +186,7 @@ def main():
         # Screen reflection #############################################################
         # cv.imshow('Hand Gesture Recognition', debug_image)
         stframe.image(debug_image, channels='BGR')
+         webtric_streamer(key ="cap_device",)
 
     cap.release()
     cv.destroyAllWindows()
